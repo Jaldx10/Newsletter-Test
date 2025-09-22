@@ -1,136 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Listaso Newsletter Mockup (Refined)</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --listaso-blue:#2267ff; /* Listaso primary vibe */
-      --listaso-dark:#0f1115;
-      --card-1:#4f46e5; /* indigo */
-      --card-2:#7c3aed; /* purple */
-      --card-3:#06b6d4; /* cyan */
-      --card-4:#2563eb; /* blue */
-      --accent:#ff7a00; /* CTA/orange */
-    }
-    *{box-sizing:border-box}
-    body{margin:0;padding:0;display:flex;justify-content:center;background:#eef2f7;font-family:'Montserrat',sans-serif}
+<h3>CasaTIC 2025</h3>
+<p>Our scrum master shared lessons on servant leadership and agile teams.</p>
+</article>
 
-    /* === ARTBOARD ====================================================== */
-    .newsletter{width:720px;height:1032px;position:relative;background:#fff;overflow:hidden;border-radius:10px;box-shadow:0 8px 24px rgba(9,18,36,.12);display:flex;flex-direction:column}
 
-    /* === LEFT MONTH RAIL (like reference) ============================== */
-    .month-rail{position:absolute;left:12px;top:12px;bottom:12px;width:84px;background:var(--listaso-blue);border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:12px}
-    .rail-badge{width:100%;display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.15);color:#fff;padding:6px 8px;border-radius:10px;font-size:10px;font-weight:700;letter-spacing:.4px}
-    .rail-dot{width:8px;height:8px;border-radius:50%;background:#fff}
-    .rail-month{margin-top:auto;margin-bottom:auto;writing-mode:vertical-rl;transform:rotate(180deg);color:#fff;font-weight:800;font-size:44px;letter-spacing:1px}
+<article class="tile connect">
+<div class="img-ph"></div>
+<span class="tag">Integrations</span>
+<h3>Connecting Systems, Accelerating Possibilities</h3>
+<p>API scalability, multicloud strategy, and AI‑driven process automation explored in CDMX.</p>
+</article>
 
-    /* === MAIN GRID (top section) ====================================== */
-    .top{margin-left:120px; /* account for rail */
-         padding:14px 16px 0 8px;display:grid;gap:12px;grid-template-columns:2fr 1fr;grid-auto-rows:1fr}
-    .tile{position:relative;border-radius:14px;color:#fff;overflow:hidden;min-height:170px;padding:18px;display:flex;flex-direction:column;justify-content:flex-end;box-shadow:0 6px 16px rgba(0,0,0,.12)}
-    .tile h3{margin:0 0 6px;font-size:22px;font-weight:800}
-    .tile p{margin:0;font-size:13px;line-height:1.35;opacity:.95}
-    .tag{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;background:rgba(255,255,255,.16);padding:4px 8px;border-radius:999px;margin-bottom:auto}
 
-    /* gradient skins to mimic reference */
-    .purpose{grid-column:1/2;grid-row:1/2;background:linear-gradient(135deg,#5b5ddc, #3c44b1)}
-    .women{grid-column:2/3;grid-row:1/3;background:linear-gradient(135deg,#a258ff,#7b38e6)}
-    .connect{grid-column:1/2;grid-row:2/3;background:linear-gradient(135deg,#07c6d8,#14a1d4)}
-    .smarter{grid-column:2/3;grid-row:3/4;background:linear-gradient(135deg,#3b82f6,#2156f3)}
+<article class="tile smarter">
+<div class="img-ph"></div>
+<span class="tag">Customer Wins</span>
+<h3>Smarter Tech Delivered</h3>
+<div class="list">
+<div class="list-item"><b>Retail breakthrough</b><span>DSD + chatbot pilot improves order status visibility for a national pharmacy.</span></div>
+<div class="list-item"><b>Fintech success</b><span>Payments sync + forecasting combined for smarter decisions.</span></div>
+</div>
+</article>
+</section>
 
-    /* photo placeholders */
-    .img-ph{position:absolute;inset:0;background:radial-gradient(60% 60% at 70% 30%, rgba(255,255,255,.25), transparent),
-                        linear-gradient(0deg, rgba(0,0,0,.15), rgba(0,0,0,.15));
-             opacity:.5}
-    .mini-img{height:44px;width:76%;background:rgba(255,255,255,.18);border-radius:8px;margin-top:8px}
 
-    /* list block style like reference's "Smarter Tech Delivered" */
-    .list{margin-top:6px;display:grid;gap:8px}
-    .list-item{background:rgba(255,255,255,.1);padding:8px 10px;border-radius:10px}
-    .list-item b{font-size:12px;display:block;margin-bottom:2px}
-    .list-item span{font-size:12px;opacity:.95}
-
-    /* === HERO / PODCAST BAND (bottom) ================================= */
-    .hero{margin:12px;margin-left:120px;background:var(--listaso-dark);color:#fff;border-radius:14px;display:grid;grid-template-columns:1.4fr 1fr;gap:12px;align-items:center;padding:18px}
-    .hero h1{margin:0 0 8px;font-size:46px;font-weight:800;letter-spacing:-.5px}
-    .hero-sub{font-size:15px;opacity:.9;margin:0 0 14px}
-    .pill{display:inline-flex;gap:6px;align-items:center;background:#ff8a00;color:#111;font-weight:800;border-radius:999px;padding:6px 10px;font-size:11px}
-    .cta{margin-top:6px;display:inline-block;background:#2563eb;color:#fff;text-decoration:none;padding:10px 14px;border-radius:10px;font-weight:700;font-size:13px}
-    .hosts{height:160px;border-radius:12px;background:linear-gradient(135deg,#23262d,#171a20);display:flex;align-items:center;justify-content:center;gap:14px}
-    .host{width:42%;height:120px;background:rgba(255,255,255,.06);border-radius:10px}
-
-    /* === ALT VARIANT =================================================== */
-    /* Swap .variant-b on .newsletter to preview a recommended alternate layout */
-    .variant-b .month-rail{width:0;left:0;top:0;bottom:auto;height:88px;padding:0 16px;border-radius:0 0 12px 12px;flex-direction:row;gap:10px}
-    .variant-b .rail-month{writing-mode:horizontal-tb;transform:none;font-size:28px;margin:0}
-    .variant-b .top{margin-left:0;padding:16px;grid-template-columns:1fr 1fr 1fr}
-    .variant-b .purpose{grid-column:1/3}
-    .variant-b .women{grid-column:3/4;grid-row:auto}
-    .variant-b .connect{grid-column:1/2}
-    .variant-b .smarter{grid-column:2/4}
-    .variant-b .hero{margin:16px}
-  </style>
-</head>
-<body>
-  <!-- Toggle between variant A (closer to reference) and variant B (alternative) by changing the class below -->
-  <div class="newsletter variant-a">
-    <!-- Left vertical rail -->
-    <aside class="month-rail">
-      <div class="rail-badge"><span class="rail-dot"></span>LISTASO IN ACTION</div>
-      <div class="rail-month">May 2025</div>
-    </aside>
-
-    <!-- Top grid (cards) -->
-    <section class="top">
-      <article class="tile purpose">
-        <div class="img-ph"></div>
-        <span class="tag">Culture</span>
-        <h3>Purpose‑Driven Culture</h3>
-        <p>Recognized for innovation, equity & inclusion across wholesale and distribution tech.</p>
-        <div class="mini-img"></div>
-      </article>
-
-      <article class="tile women">
-        <div class="img-ph"></div>
-        <span class="tag">Women in Tech</span>
-        <h3>CasaTIC 2025</h3>
-        <p>Our scrum master shared lessons on servant leadership and agile teams.</p>
-      </article>
-
-      <article class="tile connect">
-        <div class="img-ph"></div>
-        <span class="tag">Integrations</span>
-        <h3>Connecting Systems, Accelerating Possibilities</h3>
-        <p>API scalability, multicloud strategy, and AI‑driven process automation explored in CDMX.</p>
-      </article>
-
-      <article class="tile smarter">
-        <div class="img-ph"></div>
-        <span class="tag">Customer Wins</span>
-        <h3>Smarter Tech Delivered</h3>
-        <div class="list">
-          <div class="list-item"><b>Retail breakthrough</b><span>DSD + chatbot pilot improves order status visibility for a national pharmacy.</span></div>
-          <div class="list-item"><b>Fintech success</b><span>Payments sync + forecasting combined for smarter decisions.</span></div>
-        </div>
-      </article>
-    </section>
-
-    <!-- Bottom hero (podcast/series) -->
-    <section class="hero">
-      <div>
-        <div class="pill">EP. 01 • Season 01</div>
-        <h1>Debugging Distribution</h1>
-        <p class="hero-sub">Real clients. Applied AI lessons. Stories on logistics & field‑sales challenges from Latin America.</p>
-        <a class="cta" href="#">Listen on YouTube & Spotify</a>
-      </div>
-      <div class="hosts">
-        <div class="host"></div>
-        <div class="host"></div>
-      </div>
-    </section>
-  </div>
+<section class="hero">
+<div>
+<div class="pill">EP. 01 • Season 01</div>
+<h1>Debugging Distribution</h1>
+<p class="hero-sub">Real clients. Applied AI lessons. Stories on logistics & field‑sales challenges from Latin America.</p>
+<a class="cta" href="#">Listen on YouTube & Spotify</a>
+</div>
+<div class="hosts">
+<div class="host"></div>
+<div class="host"></div>
+</div>
+</section>
+</div>
+</main>
 </body>
 </html>
